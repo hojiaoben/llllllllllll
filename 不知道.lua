@@ -1,3 +1,118 @@
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+
+    Title = "正在启动",
+
+    Text = "请稍等",
+
+    Duration = 5,
+
+})
+
+wait(2)
+
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+
+    Title = "作者",
+
+    Text = "红毛狗头",
+
+    Duration = 5,
+
+})
+
+wait(2)
+
+print("Anti Afk On")
+
+        local vu = game:GetService("VirtualUser")
+
+        game:GetService("Players").LocalPlayer.Idled:connect(function()
+
+           vu:Button2Down(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+
+           wait(1)
+
+           vu:Button2Up(Vector2.new(0,0),workspace.CurrentCamera.CFrame)
+
+        end)
+
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+
+    Title = "反挂机已自动开启",
+
+    Text = "被踢出服务器的概率已降低",
+
+    Duration = 5,
+
+})
+
+wait(1)
+
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+
+    Title = "脚本正在加载",
+
+    Text = "3",
+
+    Duration = 5,
+
+})
+
+wait(1)
+
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+
+    Title = "脚本正在加载",
+
+    Text = "2",
+
+    Duration = 5,
+
+})
+
+wait(1)
+
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+
+    Title = "脚本正在加载",
+
+    Text = "1",
+
+    Duration = 5,
+
+})
+
+wait(2)
+
+local CoreGui = game:GetService("StarterGui")
+
+CoreGui:SetCore("SendNotification", {
+
+    Title = "启动成功",
+
+    Text = "您好"..game.Players.LocalPlayer.Name.."，欢迎使用   紅脚本   ",
+
+    Duration = 5,
+
+})
+
+local LBLG = Instance.new("ScreenGui", getParent)
+
+local LBL = Instance.new("TextLabel", getParent)
+
+local player = game.Players.LocalPlayer
 local lib = loadstring(game:HttpGet"https://raw.githubusercontent.com/dawid-scripts/UI-Libs/main/Vape.txt")() 
 
 local OpenUI = Instance.new("ScreenGui") 
