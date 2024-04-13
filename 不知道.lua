@@ -41,7 +41,8 @@ local setup = win:Tab("白脚本区")
 setup:Button("新白脚本",function()
 _G.qq="1790789616"loadstring(game:HttpGet(('https://raw.githubusercontent.com/wev666666/baijiaobengV2.0beta/main/%E7%99%BD%E8%84%9A%E6%9C%ACbeta'),true))()
 end)
-setup:Button("旧白脚本",function()
-_G["白脚本作者修狗"]="xdjhadgdsrfcyefjhsadcctyseyr6432478rudghfvszhxcaheey"
-loadstring(game:HttpGet(('https://raw.githubusercontent.com/wev666666/baijiaobengV2.0beta/main/%E7%99%BD%E8%84%9A%E6%9C%ACbeta'),true))() 
+local setup = win:Tab("伐木大亨2")
+
+setup:Button("自动建筑",function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/hojiaoben/llllllllllll/main/%E8%87%AA%E5%8A%A8%E5%BB%BA%E9%80%A0%20(1).txt"))()
 end)
