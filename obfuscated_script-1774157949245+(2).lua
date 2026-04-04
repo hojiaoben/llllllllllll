@@ -141,6 +141,18 @@ StartBtn.MouseButton1Click:Connect(function()
     local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/hojiaoben/llllllllllll/refs/heads/main/ui%E7%AC%AC%E4%BA%8C%E4%B8%AA.txt"))()
     wait(1) 
     Notification:Notify( 
+     {Title = "Moon Pixel提醒通知", Description = "处理树bug开黑洞吸即可"}, 
+     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"}, 
+     {Image = "http://www.roblox.com/asset/?id=4483345998", ImageColor = Color3.fromRGB(255, 84, 84)} 
+ ) 
+    wait(1) 
+    Notification:Notify( 
+     {Title = "Moon Pixel提醒通知", Description = "再说一遍，处理树bug开黑洞吸即可"}, 
+     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"}, 
+     {Image = "http://www.roblox.com/asset/?id=4483345998", ImageColor = Color3.fromRGB(255, 84, 84)} 
+ ) 
+    wait(4) 
+    Notification:Notify( 
         {Title = "Moon Pixel", Description = "准备加载Moon Pixel"}, 
         {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"}, 
         {Image = "http://www.roblox.com/asset/?id=4483345998", ImageColor = Color3.fromRGB(255, 84, 84)} 
