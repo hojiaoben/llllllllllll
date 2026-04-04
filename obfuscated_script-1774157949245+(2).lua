@@ -147,19 +147,7 @@ StartBtn.MouseButton1Click:Connect(function()
     ) 
     wait(1) 
     Notification:Notify( 
-        {Title = "Moon Pixel", Description = "倒时计5秒"}, 
-        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"}, 
-        {Image = "http://www.roblox.com/asset/?id=4483345998", ImageColor = Color3.fromRGB(255, 84, 84)} 
-    ) 
-    wait(1) 
-    Notification:Notify( 
-        {Title = "Moon Pixel", Description = "5"}, 
-        {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"}, 
-        {Image = "http://www.roblox.com/asset/?id=4483345998", ImageColor = Color3.fromRGB(255, 84, 84)} 
-    ) 
-    wait(1) 
-    Notification:Notify( 
-        {Title = "Moon Pixel", Description = "4"}, 
+        {Title = "Moon Pixel", Description = "倒时计3秒"}, 
         {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"}, 
         {Image = "http://www.roblox.com/asset/?id=4483345998", ImageColor = Color3.fromRGB(255, 84, 84)} 
     ) 
