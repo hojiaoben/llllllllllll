@@ -87,7 +87,7 @@ local texts = {
     "Moon Pixel作者:Moonlight", 
     "Moon Pixel代理:鲨鱼🦈",   
     "Moon Pixel更新内容↓",
-    "处理树bug开黑洞吸即可",
+    "传送矿已修复",
     "必看提醒！！！↓",
     "封号不负责!!!!",
     "如果你被封号,我可以给你提供更换方案",
