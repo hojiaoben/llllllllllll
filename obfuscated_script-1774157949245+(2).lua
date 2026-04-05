@@ -41,6 +41,7 @@ Title.TextSize = 24
 Title.Font = Enum.Font.GothamBold
 Title.TextXAlignment = Enum.TextXAlignment.Center
 Title.Parent = TitleBar
+
 local CloseBtn = Instance.new("TextButton")
 CloseBtn.Size = UDim2.new(0, 60, 0, 40)
 CloseBtn.Position = UDim2.new(1, -70, 0.5, -20)
@@ -49,12 +50,28 @@ CloseBtn.Text = "X"
 CloseBtn.TextColor3 = Color3.new(1,1,1)
 CloseBtn.TextSize = 28
 CloseBtn.Parent = TitleBar
+local CloseBtnBG = Instance.new("Frame")
+CloseBtnBG.Size = UDim2.new(1, 0, 1, 0)
+CloseBtnBG.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+CloseBtnBG.BackgroundTransparency = 1
+CloseBtnBG.ZIndex = 0
+CloseBtnBG.Parent = CloseBtn
 local c_corner = Instance.new("UICorner")
 c_corner.CornerRadius = UDim.new(0, 8)
 c_corner.Parent = CloseBtn
 local c_stroke = Instance.new("UIStroke")
 c_stroke.Thickness = 2
 c_stroke.Parent = CloseBtn
+CloseBtn.MouseEnter:Connect(function()
+    CloseBtnBG.BackgroundTransparency = 0.7
+    CloseBtn.TextSize = 30
+    c_stroke.Thickness = 3
+end)
+CloseBtn.MouseLeave:Connect(function()
+    CloseBtnBG.BackgroundTransparency = 1
+    CloseBtn.TextSize = 28
+    c_stroke.Thickness = 2
+end)
 task.spawn(function()
     local h = 0
     while CloseBtn and CloseBtn.Parent do
@@ -66,6 +83,7 @@ task.spawn(function()
         task.wait(0.02)
     end
 end)
+
 local Scroll = Instance.new("ScrollingFrame")
 Scroll.Size = UDim2.new(1, -20, 1, -120)
 Scroll.Position = UDim2.new(0, 10, 0, 60)
@@ -87,8 +105,7 @@ local texts = {
     "Moon Pixel作者:Moonlight", 
     "Moon Pixel代理:鲨鱼🦈",   
     "Moon Pixel更新内容↓",
-    "ui更换",
-    "有一些bug已修复",
+    "处理树已修复",
     "必看提醒！！！↓",
     "封号不负责!!!!",
     "如果你被封号,我可以给你提供更换方案",
@@ -107,6 +124,7 @@ for _, t in pairs(texts) do
     lbl.TextXAlignment = Enum.TextXAlignment.Center
     lbl.Parent = Scroll
 end
+
 local StartBtn = Instance.new("TextButton")
 StartBtn.Size = UDim2.new(0, 260, 0, 50)
 StartBtn.Position = UDim2.new(0.5, -130, 1, -65)
@@ -115,12 +133,28 @@ StartBtn.Text = "开始使用脚本"
 StartBtn.TextColor3 = Color3.new(1,1,1)
 StartBtn.TextSize = 22
 StartBtn.Parent = MainFrame
+local StartBtnBG = Instance.new("Frame")
+StartBtnBG.Size = UDim2.new(1, 0, 1, 0)
+StartBtnBG.BackgroundColor3 = Color3.new(0.2, 0.2, 0.2)
+StartBtnBG.BackgroundTransparency = 1
+StartBtnBG.ZIndex = 0
+StartBtnBG.Parent = StartBtn
 local s_corner = Instance.new("UICorner")
 s_corner.CornerRadius = UDim.new(0, 10)
 s_corner.Parent = StartBtn
 local s_stroke = Instance.new("UIStroke")
 s_stroke.Thickness = 2
 s_stroke.Parent = StartBtn
+StartBtn.MouseEnter:Connect(function()
+    StartBtnBG.BackgroundTransparency = 0.7
+    StartBtn.TextSize = 24
+    s_stroke.Thickness = 3
+end)
+StartBtn.MouseLeave:Connect(function()
+    StartBtnBG.BackgroundTransparency = 1
+    StartBtn.TextSize = 22
+    s_stroke.Thickness = 2
+end)
 task.spawn(function()
     local h = 0
     while StartBtn and StartBtn.Parent do
@@ -132,6 +166,7 @@ task.spawn(function()
         task.wait(0.02)
     end
 end)
+
 CloseBtn.MouseButton1Click:Connect(function()
     ScreenGui:Destroy()
     print("[Moon Pixel] 公告UI已关闭")
@@ -141,18 +176,6 @@ StartBtn.MouseButton1Click:Connect(function()
     local NotificationHolder = loadstring(game:HttpGet("https://raw.githubusercontent.com/hojiaoben/llllllllllll/refs/heads/main/ui%E7%AC%AC%E4%B8%80%E4%B8%AA.txt"))()
     local Notification = loadstring(game:HttpGet("https://raw.githubusercontent.com/hojiaoben/llllllllllll/refs/heads/main/ui%E7%AC%AC%E4%BA%8C%E4%B8%AA.txt"))()
     wait(1) 
-    Notification:Notify( 
-     {Title = "Moon Pixel提醒通知", Description = "处理树bug开黑洞吸即可"}, 
-     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"}, 
-     {Image = "http://www.roblox.com/asset/?id=4483345998", ImageColor = Color3.fromRGB(255, 84, 84)} 
- ) 
-    wait(1) 
-    Notification:Notify( 
-     {Title = "Moon Pixel提醒通知", Description = "再说一遍，处理树bug开黑洞吸即可"}, 
-     {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"}, 
-     {Image = "http://www.roblox.com/asset/?id=4483345998", ImageColor = Color3.fromRGB(255, 84, 84)} 
- ) 
-    wait(4) 
     Notification:Notify( 
         {Title = "Moon Pixel", Description = "准备加载Moon Pixel"}, 
         {OutlineColor = Color3.fromRGB(80, 80, 80),Time = 5, Type = "image"}, 
